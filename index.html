@@ -12,44 +12,79 @@
         <img src="img/odin-lined.png" id="logo" />
         <h1 id="logoTxt">ODIN</h1>
       </div>
-      <p>Photo by <a>Halie West</a> on <a>Unsplash</a></p>
+      <p id="creditText">
+        Photo by <a class="link">Halie West</a> on <a class="link">Unsplash</a>
+      </p>
     </div>
 
     <div id="main">
-      <p>
+      <p class="waffle">
         This is not a real online service! You know you need something like this
         in your life to help you realise your deepest dreams.
         <br />Sign up <em>now</em> to get started.
       </p>
-      <p>You <em>know</em> you want to.</p>
+      <p class="waffle">You <em>know</em> you want to.</p>
 
       <div id="form">
         <form>
           <h1>Let's do this!</h1>
-          <div>
-            <label for="fName" class="formLabel">FIRST NAME</label>
-            <input type="text" name="fName" class="inputBox" />
-            <label for="lName" class="formLabel">LAST NAME</label>
-            <input type="text" name="lName" class="inputBox" />
+          <div class="formLine">
+            <label for="fNameBox" class="formLabel">FIRST NAME</label>
+            <input
+              type="text"
+              name="fName"
+              id="fNameBox"
+              class="inputBox formLeft"
+            />
+            <label for="lNameBox" class="formLabel">LAST NAME</label>
+            <input
+              type="text"
+              name="lName"
+              id="lNameBox"
+              class="inputBox formRight"
+            />
           </div>
-          <div>
-            <label for="email" class="formLabel">EMAIL</label>
-            <input type="email" name="email" class="inputBox" />
-            <label for="telNum" class="formLabel">PHONE NUMBER</label>
-            <input type="tel" name="telNum" class="inputBox" />
+          <div class="formLine">
+            <label for="emailBox" class="formLabel">EMAIL</label>
+            <input type="email" name="email" id="emailBox" class="inputBox" />
+            <label for="telNumBox" class="formLabel">PHONE NUMBER</label>
+            <input type="tel" name="telNum" id="telNumBox" class="inputBox" />
           </div>
-          <div>
-            <label for="passWd" class="formLabel">PASSWORD</label>
-            <input type="password" name="passWd" class="inputBox" />
-            <label for="conPassWd" class="formLabel"> CONFIRM PASSWORD</label>
-            <input type="password" name="conPassWd" class="inputBox" />
+          <div class="formLine">
+            <label for="passWdBox" class="formLabel">PASSWORD</label>
+            <input
+              type="password"
+              name="passWd"
+              id="passWdBox"
+              class="inputBox"
+            />
+            <label for="conPassWdBox" class="formLabel">
+              CONFIRM PASSWORD</label
+            >
+            <input
+              type="password"
+              name="conPassWd"
+              id="conPassWdBox"
+              class="inputBox"
+            />
           </div>
         </form>
       </div>
       <button type="submit" id="submitBtn">Create Account</button>
-      <p id="footerText">Already have an account? <a>Log in</a></p>
+      <p id="footerText">
+        Already have an account? <a id="loginLink">Log in</a>
+      </p>
     </div>
   </body>
 
-  <script></script>
+  <script>
+    const passwordBox = document.getElementById("passWdBox");
+    const conPasswordBox = document.getElementById("conPassWdBox");
+
+    function checkpws() {
+      if (passwordBox.value != conPasswordBox.value) {
+        alert("Doesn't match");
+      }
+    }
+  </script>
 </html>
