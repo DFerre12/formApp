@@ -29,51 +29,65 @@
         <form>
           <h1>Let's do this!</h1>
           <div class="formLine">
-            <label for="fNameBox" class="formLabel">FIRST NAME</label>
-            <input
-              type="text"
-              name="fName"
-              id="fNameBox"
-              class="inputBox formLeft"
-            />
-            <label for="lNameBox" class="formLabel">LAST NAME</label>
-            <input
-              type="text"
-              name="lName"
-              id="lNameBox"
-              class="inputBox formRight"
-            />
+            <div class="formCol">
+              <label for="fNameBox" class="formLabel">FIRST NAME</label>
+              <input
+                type="text"
+                name="fName"
+                id="fNameBox"
+                class="inputBox formLeft"
+              />
+            </div>
+            <div class="formCol">
+              <label for="lNameBox" class="formLabel">LAST NAME</label>
+              <input
+                type="text"
+                name="lName"
+                id="lNameBox"
+                class="inputBox formRight"
+              />
+            </div>
           </div>
           <div class="formLine">
-            <label for="emailBox" class="formLabel">EMAIL</label>
-            <input type="email" name="email" id="emailBox" class="inputBox" />
-            <label for="telNumBox" class="formLabel">PHONE NUMBER</label>
-            <input type="tel" name="telNum" id="telNumBox" class="inputBox" />
+            <div class="formCol">
+              <label for="emailBox" class="formLabel">EMAIL</label>
+              <input type="email" name="email" id="emailBox" class="inputBox" />
+            </div>
+            <div class="formCol">
+              <label for="telNumBox" class="formLabel">PHONE NUMBER</label>
+              <input type="tel" name="telNum" id="telNumBox" class="inputBox" />
+            </div>
           </div>
           <div class="formLine">
-            <label for="passWdBox" class="formLabel">PASSWORD</label>
-            <input
-              type="password"
-              name="passWd"
-              id="passWdBox"
-              class="inputBox"
-            />
-            <label for="conPassWdBox" class="formLabel">
-              CONFIRM PASSWORD</label
-            >
-            <input
-              type="password"
-              name="conPassWd"
-              id="conPassWdBox"
-              class="inputBox"
-            />
+            <div class="formCol">
+              <label for="passWdBox" class="formLabel">PASSWORD</label>
+              <input
+                type="password"
+                name="passWd"
+                id="passWdBox"
+                class="inputBox"
+              />
+            </div>
+            <div class="formCol">
+              <label for="conPassWdBox" class="formLabel">
+                CONFIRM PASSWORD</label
+              >
+              <input
+                type="password"
+                name="conPassWd"
+                id="conPassWdBox"
+                class="inputBox"
+              />
+            </div>
           </div>
         </form>
       </div>
-      <button type="submit" id="submitBtn">Create Account</button>
-      <p id="footerText">
-        Already have an account? <a id="loginLink">Log in</a>
-      </p>
+      <div id="">
+        <button type="submit" id="submitBtn">Create Account</button>
+        <p id="footerText">
+          Already have an account? <a id="loginLink">Log in</a>
+        </p>
+      </div>
     </div>
   </body>
 

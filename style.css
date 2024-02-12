@@ -20,27 +20,42 @@ body {
 }
 
 #form {
-  box-shadow: 0px 1px 5px;
+  box-shadow: 0px 1px 3px;
 }
 
 .formLine {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.5rem;
+}
+
+.formCol {
+  margin-right: 10%;
 }
 
 form {
-  margin-left: 2rem;
-}
-
-.inputBox {
-  margin-bottom: 0.5rem;
+  margin: 2rem;
 }
 
 .formLabel {
   font-size: 0.5rem;
 }
 
-.inputBox, .formLabel {
+.inputBox,
+.formLabel {
   display: block;
+}
+
+.inputBox {
+  border: 1px solid #c5c5c5;
+  border-radius: 3px;
+}
+
+.inputBox:focus {
+  border: 1px solid #54b2ff;
+  outline: none;
+  box-shadow: 2px 1px 5px;
+  box-sizing: border-box;
 }
 
 .formLeft {
@@ -55,7 +70,7 @@ form {
   margin: 5%;
   padding: 1rem 5rem;
   color: #ffffff;
-  background-color: #596D48;
+  background-color: #596d48;
   border: none;
   border-radius: 5px;
 }
@@ -102,5 +117,5 @@ form {
 }
 
 #loginLink {
-  color: #596D48;
+  color: #596d48;
 }
