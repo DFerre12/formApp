@@ -14,7 +14,8 @@
       </div>
       <footer>
         <p id="creditText">
-          Photo by <a class="link">Halie West</a> on <a class="link">Unsplash</a>
+          Photo by <a class="link">Halie West</a> on
+          <a class="link">Unsplash</a>
         </p>
       </footer>
     </div>
@@ -69,6 +70,7 @@
                 id="passWdBox"
                 class="inputBox"
               />
+              <p id="pwMismatchTxt" class="pwMismatchHidden">*Passwords do not match</p>
             </div>
             <div class="formCol">
               <label for="conPassWdBox" class="formLabel">
@@ -85,7 +87,9 @@
         </form>
       </div>
       <div id="bottom">
-        <button type="submit" onclick="alert('I am stupid')" id="submitBtn">Create Account</button>
+        <button type="submit" onclick="alert('I am stupid')" id="submitBtn">
+          Create Account
+        </button>
         <p id="footerText">
           Already have an account? <a id="loginLink">Log in</a>
         </p>
@@ -96,19 +100,24 @@
   <script>
     const passwordBox = document.getElementById("passWdBox");
     const conPasswordBox = document.getElementById("conPassWdBox");
-    const defCName = 'inputBox';
-    const mismatchCName = 'error';
+    const pwMismatchTxt = document.getElementById("pwMismatchTxt");
+    const defPwBoxCName = "inputBox";
+    const mismatchCName = "error";
+    const defMismatchTxtCName = "pwMismatchHidden";
+    const mismatchTxtCName = "pwMismatch";
 
     function checkPws() {
       if (passwordBox.value != conPasswordBox.value) {
         passwordBox.className = mismatchCName;
         conPasswordBox.className = mismatchCName;
+        pwMismatchTxt.className = mismatchTxtCName;
       } else {
-        passwordBox.className = defCName;
-        conPasswordBox.className = defCName;
+        passwordBox.className = defPwBoxCName;
+        conPasswordBox.className = defPwBoxCName;
+        pwMismatchTxt.className = defMismatchTxtCName;
       }
     }
-    
+
     passwordBox.addEventListener("input", checkPws);
     conPasswordBox.addEventListener("input", checkPws);
   </script>

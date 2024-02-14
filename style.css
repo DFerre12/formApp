@@ -2,6 +2,9 @@
   font-family: logo;
   src: url(Norse-Bold.otf);
 }
+:root {
+  --error-color: rgb(255, 4, 4);
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -17,6 +20,7 @@ body {
 .waffle {
   margin-left: 2rem;
   font-weight: bold;
+  max-width: 45ch;
 }
 
 .waffle:first-child {
@@ -24,17 +28,21 @@ body {
 }
 
 #form {
-  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.31);
 }
 
 .formLine {
   display: flex;
   flex-direction: row;
-  padding-bottom: 1rem;;
+  padding-bottom: 1rem;
 }
 
 .formCol:first-child {
   margin-right: 4rem;
+}
+
+.formCol {
+  max-width: 15rem;
 }
 
 form {
@@ -60,24 +68,30 @@ form {
 .inputBox:focus {
   border: 1px solid #54b2ff;
   outline: none;
-  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.31);
 }
 
 .error {
-  border: 1px solid rgb(255, 4, 4);
+  border: 1px solid var(--error-color);
   border-radius: 3px;
   height: 1.25rem;
-  width: 15rem;
+  width: 100%;
 }
 
 .error:focus {
-  border: 1px solid rgb(255, 4, 4);
+  border: 1px solid var(--error-color);
   outline: none;
-  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.31);
 }
 
-.formRight {
-  float: right;
+.pwMismatchHidden {
+  display: none;
+}
+
+.pwMismatch {
+  font-size: 0.5rem;
+  color: var(--error-color);
+  margin: 0;
 }
 
 #bottom {
@@ -92,7 +106,7 @@ form {
   background-color: #596d48;
   border: none;
   border-radius: 8px;
-  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.31);
 }
 
 #submitBtn:hover {
@@ -140,8 +154,21 @@ form {
   color: #596d48;
 }
 
-
 footer {
   position: fixed;
   bottom: 0;
 }
+
+@media (max-width: 850px) {
+  #main {
+    width: 100%;
+  }
+
+  #sideImg {
+    display: none;
+  }
+}
+
+/* @media (max-width: 612px) {
+
+} */
