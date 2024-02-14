@@ -84,8 +84,8 @@
           </div>
         </form>
       </div>
-      <div id="">
-        <button type="submit" onclick="checkpws()" id="submitBtn">Create Account</button>
+      <div id="bottom">
+        <button type="submit" onclick="alert('I am stupid')" id="submitBtn">Create Account</button>
         <p id="footerText">
           Already have an account? <a id="loginLink">Log in</a>
         </p>
@@ -96,11 +96,20 @@
   <script>
     const passwordBox = document.getElementById("passWdBox");
     const conPasswordBox = document.getElementById("conPassWdBox");
+    const defCName = 'inputBox';
+    const mismatchCName = 'error';
 
-    function checkpws() {
+    function checkPws() {
       if (passwordBox.value != conPasswordBox.value) {
-        alert("Doesn't match");
+        passwordBox.className = mismatchCName;
+        conPasswordBox.className = mismatchCName;
+      } else {
+        passwordBox.className = defCName;
+        conPasswordBox.className = defCName;
       }
     }
+    
+    passwordBox.addEventListener("input", checkPws);
+    conPasswordBox.addEventListener("input", checkPws);
   </script>
 </html>

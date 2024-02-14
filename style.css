@@ -15,22 +15,26 @@ body {
 }
 
 .waffle {
-  margin: 2rem;
+  margin-left: 2rem;
   font-weight: bold;
 }
 
+.waffle:first-child {
+  margin-top: 7rem;
+}
+
 #form {
-  box-shadow: 0px 1px 3px;
+  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
 }
 
 .formLine {
   display: flex;
   flex-direction: row;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;;
 }
 
-.formCol {
-  margin-right: 10%;
+.formCol:first-child {
+  margin-right: 4rem;
 }
 
 form {
@@ -38,41 +42,57 @@ form {
 }
 
 .formLabel {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .inputBox,
 .formLabel {
   display: block;
+  width: 15rem;
 }
 
 .inputBox {
   border: 1px solid #c5c5c5;
   border-radius: 3px;
+  height: 1.25rem;
 }
 
 .inputBox:focus {
   border: 1px solid #54b2ff;
   outline: none;
-  box-shadow: 2px 1px 5px;
-  box-sizing: border-box;
+  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
 }
 
-.formLeft {
-  float: left;
+.error {
+  border: 1px solid rgb(255, 4, 4);
+  border-radius: 3px;
+  height: 1.25rem;
+  width: 15rem;
+}
+
+.error:focus {
+  border: 1px solid rgb(255, 4, 4);
+  outline: none;
+  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
 }
 
 .formRight {
   float: right;
 }
 
+#bottom {
+  margin: 3rem;
+}
+
 #submitBtn {
-  margin: 5%;
-  padding: 1rem 5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 4rem;
   color: #ffffff;
   background-color: #596d48;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.31);
 }
 
 #submitBtn:hover {
