@@ -119,3 +119,9 @@ form {
 #loginLink {
   color: #596d48;
 }
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
